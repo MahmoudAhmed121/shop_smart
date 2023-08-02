@@ -6,20 +6,18 @@ class AppTheme {
   static ThemeData themeData(
       {required bool isDarkTheme, required BuildContext context}) {
     return ThemeData(
-    
       appBarTheme: AppBarTheme(
-        backgroundColor:  isDarkTheme ? AppColor.darkScafoldColor : AppColor.lightScafoldColor,
-
-        titleTextStyle: Styles.textStyle16.copyWith(
-          color: isDarkTheme ? Colors.white :Colors.black
-          
-        ),
+        backgroundColor: isDarkTheme
+            ? AppColor.darkScafoldColor
+            : AppColor.lightScafoldColor,
+        titleTextStyle: Styles.textStyle16
+            .copyWith(color: isDarkTheme ? Colors.white : Colors.black),
       ),
       scaffoldBackgroundColor:
           isDarkTheme ? AppColor.darkScafoldColor : AppColor.lightScafoldColor,
       cardColor: isDarkTheme ? AppColor.darkCardColor : AppColor.lightCardColor,
       brightness: isDarkTheme ? Brightness.dark : Brightness.light,
-       useMaterial3: true,
+      useMaterial3: true,
     );
   }
 }

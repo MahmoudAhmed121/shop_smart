@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shop_smart/core/services/assets_manager.dart';
 import 'package:shop_smart/core/utils/text_style.dart';
+import 'package:shop_smart/core/widgets/app_name_text_widget.dart';
 import 'package:shop_smart/core/widgets/custom_Button_widget.dart';
 import 'package:shop_smart/core/widgets/custom_lists_tile.dart';
 import 'package:shop_smart/core/widgets/custom_text_widget.dart';
@@ -17,10 +18,10 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: Image.asset(AssetsManager.shoppingCart),
-        title: Text(
-          "Profile Screen",
-          style: Styles.textStyle14,
-        ),
+        title: const Padding(
+          padding: EdgeInsets.all(8.0),
+          child: CustomAppNameText( text: "Profile Text",),
+        )
       ),
       body: SizedBox(
         width: MediaQuery.of(context).size.width,
@@ -141,7 +142,7 @@ class ProfileScreen extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 130),
-              child: CustomButton(onPressed: (){},  icon: Icons.login ,text: "Logout",))
+              child: CustomButton(onPressed: (){},  icon: Icons.login ,text: "Logout",),)
           ],
         ),
       ),
