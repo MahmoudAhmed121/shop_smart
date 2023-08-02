@@ -24,6 +24,7 @@ class ShopSmart extends StatelessWidget {
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: AppTheme.themeData(isDarkTheme: themeProvider.getDarkTheme, context: context),
       home: const BottomBarScreen(),

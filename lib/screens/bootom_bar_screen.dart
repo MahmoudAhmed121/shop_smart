@@ -14,7 +14,7 @@ class BottomBarScreen extends StatefulWidget {
 
 class _BottomBarScreenState extends State<BottomBarScreen> {
   late PageController controller;
-  int currantScreen = 0;
+  int currantScreen = 3;
   List<Widget> Screens = [
     const HomeScreen(),
     const SearchScreen(),
