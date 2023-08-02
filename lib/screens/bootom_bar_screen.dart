@@ -45,8 +45,10 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
           setState(() {
             currantScreen = index;
           });
-     
-          controller.animateToPage(currantScreen, duration: const Duration(milliseconds: 500), curve: Curves.easeIn);
+
+          controller.animateToPage(currantScreen,
+              duration: const Duration(milliseconds: 500),
+              curve: Curves.easeIn);
         },
         destinations: const [
           NavigationDestination(
