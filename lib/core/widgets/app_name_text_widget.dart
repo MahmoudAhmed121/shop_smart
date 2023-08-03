@@ -12,7 +12,7 @@ final String text;
     return Shimmer.fromColors(
       period: const Duration(seconds: 5),
       baseColor: AppColor.greyColor,
-      highlightColor: AppColor.redColor,
+      highlightColor: AppColor.deepredColor,
       child: CustomTextWidget(style: Styles.textStyle22, text: text));
   }
 }

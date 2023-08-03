@@ -20,7 +20,7 @@ class ProfileScreen extends StatelessWidget {
         leading: Image.asset(AssetsManager.shoppingCart),
         title: const Padding(
           padding: EdgeInsets.all(8.0),
-          child: CustomAppNameText( text: "Profile Text",),
+          child: CustomAppNameText( text: "Profile Screen",),
         )
       ),
       body: SizedBox(

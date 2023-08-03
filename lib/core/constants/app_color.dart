@@ -8,6 +8,7 @@ class AppColor{
   static const Color darkScafoldColor = Color.fromARGB(255, 9, 3, 27);
   static const Color darkPrimary = Color.fromARGB(255, 94, 75, 236);
   static const Color darkCardColor = Color.fromARGB(255, 13, 6, 37);
-  static const Color redColor =  Color.fromARGB(255, 136, 14, 5);
+  static const Color deepredColor =  Color.fromARGB(255, 136, 14, 5);
   static const Color greyColor = Colors.grey;
+  static const Color redColor = Colors.red;
 }
