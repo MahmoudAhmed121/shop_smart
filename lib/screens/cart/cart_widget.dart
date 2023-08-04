@@ -5,6 +5,7 @@ import 'package:shop_smart/core/utils/text_style.dart';
 import 'package:shop_smart/core/widgets/custom_text_widget.dart';
 
 import '../../core/constants/app_color.dart';
+import 'show_model_sheet.dart';
 
 class CartWidget extends StatelessWidget {
   const CartWidget({super.key});
@@ -72,16 +73,25 @@ class CartWidget extends StatelessWidget {
                         text: "\$100",
                       ),
                       OutlinedButton.icon(
-                        onPressed: () {},
+                        onPressed: () {
+                          showModalBottomSheet(
+                              backgroundColor:
+                                  Theme.of(context).scaffoldBackgroundColor,
+                              context: context,
+                              builder: (context) {
+                                return const ShowModelSheat();
+                              });
+                        },
                         icon: const Icon(
                           IconlyLight.arrowDown2,
                           color: AppColor.blueColor,
                         ),
-                        label:  Text(
+                        label: Text(
                           "Qty 6",
-                          style: Styles.textStyle16.copyWith(color: AppColor.blueColor),
+                          style: Styles.textStyle16
+                              .copyWith(color: AppColor.blueColor),
                         ),
-                      )
+                      ),
                     ],
                   )
                 ],

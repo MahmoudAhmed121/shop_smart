@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
+import 'package:shop_smart/core/constants/app_color.dart';
 import 'package:shop_smart/screens/cart/cart_screen.dart';
 import 'package:shop_smart/screens/home_screen.dart';
 import 'package:shop_smart/screens/profile_screen.dart';
@@ -65,7 +66,10 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
           ),
           NavigationDestination(
             selectedIcon: Icon(IconlyBold.bag2),
-            icon: Icon(IconlyLight.bag2),
+            icon: Badge(
+              backgroundColor: AppColor.redColor,
+              label: Text("3"),
+              child: Icon(IconlyLight.bag2)),
             label: "cart",
           ),
           NavigationDestination(

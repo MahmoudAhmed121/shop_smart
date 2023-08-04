@@ -11,5 +11,6 @@ class AppColor{
   static const Color deepredColor =  Color.fromARGB(255, 136, 14, 5);
   static const Color greyColor = Colors.grey;
   static const Color redColor = Colors.red;
-    static const Color blueColor = Colors.blue;
+  static const Color blueColor = Colors.blue;
+  static const Color blackColor = Colors.black;
 }

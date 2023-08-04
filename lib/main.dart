@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shop_smart/core/utils/app_theme.dart';
 import 'package:shop_smart/provider/theme_provider.dart';
-import 'package:shop_smart/screens/bootom_bar_screen.dart';
+import 'package:shop_smart/screens/bottom_bar_screen.dart';
 
 void main() {
   runApp(

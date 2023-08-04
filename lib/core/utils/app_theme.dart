@@ -18,6 +18,33 @@ class AppTheme {
       cardColor: isDarkTheme ? AppColor.darkCardColor : AppColor.lightCardColor,
       brightness: isDarkTheme ? Brightness.dark : Brightness.light,
       useMaterial3: true,
+      inputDecorationTheme: InputDecorationTheme(
+        filled: true,
+        contentPadding: const EdgeInsets.all(8),
+       enabledBorder: _borderDone(isDarkTheme),
+        focusedBorder: _borderDone(isDarkTheme),
+        errorBorder: _borderError(context),
+        focusedErrorBorder: _borderError(context),
+      ),
     );
   }
 }
+
+InputBorder _borderDone(bool isDarkTheme) {
+  return OutlineInputBorder(
+    borderSide: BorderSide(
+      color: isDarkTheme ? AppColor.blackColor : AppColor.lightScafoldColor,
+    ),
+    borderRadius: BorderRadius.circular(8),
+  );
+}
+
+InputBorder _borderError(BuildContext context) {
+  return OutlineInputBorder(
+    borderSide: BorderSide(
+      color: Theme.of(context).colorScheme.error,
+    ),
+    borderRadius: BorderRadius.circular(8),
+  );
+}
+

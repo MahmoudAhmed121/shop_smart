@@ -5,7 +5,7 @@ import 'package:shop_smart/core/widgets/app_name_text_widget.dart';
 import 'package:shop_smart/core/widgets/embty_bag.dart';
 import 'package:shop_smart/screens/cart/cart_widget.dart';
 
-import 'buttom_checkout.dart';
+import 'buttom_check_out.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
