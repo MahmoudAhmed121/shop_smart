@@ -49,7 +49,7 @@ final String image,title,subtilte,buttomText;
                   height: 20,
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 130),
+                  padding: const EdgeInsets.symmetric(horizontal: 130,vertical: 10),
                   child: CustomButton(
                  
                     onPressed: () {},

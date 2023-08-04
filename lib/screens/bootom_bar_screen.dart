@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
-import 'package:shop_smart/screens/cart_screen.dart';
+import 'package:shop_smart/screens/cart/cart_screen.dart';
 import 'package:shop_smart/screens/home_screen.dart';
 import 'package:shop_smart/screens/profile_screen.dart';
 import 'package:shop_smart/screens/search_screen.dart';
@@ -38,6 +38,7 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
         children: Screens,
       ),
       bottomNavigationBar: NavigationBar(
+      
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         height: kBottomNavigationBarHeight,
         selectedIndex: currantScreen,
@@ -52,6 +53,7 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
         },
         destinations: const [
           NavigationDestination(
+
             selectedIcon: Icon(IconlyBold.home),
             icon: Icon(IconlyLight.home),
             label: "Home",
