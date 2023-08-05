@@ -3,6 +3,9 @@ import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:shop_smart/core/constants/app_color.dart';
 import 'package:shop_smart/core/services/assets_manager.dart';
 import 'package:shop_smart/core/widgets/app_name_text_widget.dart';
+import 'package:dynamic_height_grid_view/dynamic_height_grid_view.dart';
+
+import '../core/widgets/products/product_widget.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -12,18 +15,19 @@ class SearchScreen extends StatefulWidget {
 }
 
 class _SearchScreenState extends State<SearchScreen> {
-  late TextEditingController scrollController;
+  late TextEditingController textEditingController;
+
   @override
   void initState() {
     super.initState();
-    scrollController = TextEditingController();
+    textEditingController = TextEditingController();
   }
 
   @override
   void dispose() {
     super.dispose();
 
-    scrollController.dispose();
+    textEditingController.dispose();
   }
 
   @override
@@ -43,35 +47,46 @@ class _SearchScreenState extends State<SearchScreen> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
+              padding: const EdgeInsets.symmetric(horizontal: 8),
               child: TextField(
-                controller: scrollController,
+                controller: textEditingController,
                 decoration: InputDecoration(
                   prefixIcon: const Icon(
                     IconlyLight.search,
-                 
                   ),
                   suffixIcon: IconButton(
                     onPressed: () {
-                      setState(() {
-                        scrollController.clear();
-                      });
-                       FocusScope.of(context).unfocus();
+                      textEditingController.clear();
+                      FocusScope.of(context).unfocus();
                     },
                     icon: const Icon(
                       IconlyLight.closeSquare,
-                         color: AppColor.redColor,
+                      color: AppColor.redColor,
                     ),
                   ),
                 ),
                 onTapOutside: (event) {
                   FocusScope.of(context).unfocus();
                 },
-                onSubmitted: (value) {
-             
+                onSubmitted: (value) {},
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Expanded(
+              child: DynamicHeightGridView(
+                       
+                itemCount: 120,
+                crossAxisCount: 2,
+                builder: (ctx, index) {
+                  return const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 8),
+                    child: ProductWidget(),
+                  );
                 },
               ),
-            )
+            ),
           ],
         ),
       ),

@@ -15,7 +15,7 @@ class BottomBarScreen extends StatefulWidget {
 
 class _BottomBarScreenState extends State<BottomBarScreen> {
   late PageController controller;
-  int currantScreen = 3;
+  int currantScreen = 1;
   List<Widget> Screens = [
     const HomeScreen(),
     const SearchScreen(),
@@ -39,7 +39,6 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
         children: Screens,
       ),
       bottomNavigationBar: NavigationBar(
-      
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         height: kBottomNavigationBarHeight,
         selectedIndex: currantScreen,
@@ -48,13 +47,13 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
             currantScreen = index;
           });
 
-          controller.animateToPage(currantScreen,
-              duration: const Duration(milliseconds: 500),
-              curve: Curves.easeIn);
+       
+        
+      
+       
         },
         destinations: const [
           NavigationDestination(
-
             selectedIcon: Icon(IconlyBold.home),
             icon: Icon(IconlyLight.home),
             label: "Home",
@@ -67,9 +66,9 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
           NavigationDestination(
             selectedIcon: Icon(IconlyBold.bag2),
             icon: Badge(
-              backgroundColor: AppColor.redColor,
-              label: Text("3"),
-              child: Icon(IconlyLight.bag2)),
+                backgroundColor: AppColor.redColor,
+                label: Text("3"),
+                child: Icon(IconlyLight.bag2)),
             label: "cart",
           ),
           NavigationDestination(

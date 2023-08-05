@@ -1,6 +1,7 @@
 import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
+import 'package:shop_smart/core/constants/app_constant.dart';
 import 'package:shop_smart/core/utils/text_style.dart';
 import 'package:shop_smart/core/widgets/custom_text_widget.dart';
 
@@ -22,7 +23,7 @@ class CartWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
               child: FancyShimmerImage(
                 imageUrl:
-                    "https://image.tmdb.org/t/p/w500/oqP1qEZccq5AD9TVTIaO6IGUj7o.jpg",
+                    AppConstant.imageUrl,
                 width: size.height * 0.2,
                 height: size.height * 0.2,
               ),
