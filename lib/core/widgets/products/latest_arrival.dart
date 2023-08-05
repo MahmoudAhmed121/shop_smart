@@ -5,6 +5,8 @@ import 'package:shop_smart/core/constants/app_constant.dart';
 import 'package:shop_smart/core/utils/text_style.dart';
 import 'package:shop_smart/core/widgets/custom_text_widget.dart';
 
+import '../../../screens/inner_screens/product_details.dart';
+
 class LatestArrivalProductsWidget extends StatelessWidget {
   const LatestArrivalProductsWidget({super.key});
 
@@ -14,7 +16,9 @@ class LatestArrivalProductsWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: GestureDetector(
-        onTap: () {},
+        onTap: () {
+           Navigator.pushNamed(context, ProductDetails.productDetails);
+        },
         child: SizedBox(
           width: size.width * 0.45,
           child: Row(

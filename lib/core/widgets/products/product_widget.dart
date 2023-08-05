@@ -5,6 +5,7 @@ import 'package:shop_smart/core/constants/app_color.dart';
 import 'package:shop_smart/core/constants/app_constant.dart';
 import 'package:shop_smart/core/utils/text_style.dart';
 import 'package:shop_smart/core/widgets/custom_text_widget.dart';
+import 'package:shop_smart/screens/inner_screens/product_details.dart';
 
 class ProductWidget extends StatelessWidget {
   const ProductWidget({super.key});
@@ -16,7 +17,9 @@ class ProductWidget extends StatelessWidget {
       padding: const EdgeInsets.all(3),
       child: InkWell(
         borderRadius: BorderRadius.circular(30),
-        onTap: () {},
+        onTap: () {
+          Navigator.pushNamed(context, ProductDetails.productDetails);
+        },
         child: Column(
           children: [
             ClipRRect(
