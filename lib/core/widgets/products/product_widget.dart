@@ -32,6 +32,7 @@ class ProductWidget extends StatelessWidget {
                 Flexible(
                   flex: 5,
                   child: CustomTextWidget(
+                    maxLines: 2,
                     textOverflow: TextOverflow.ellipsis,
                     style: Styles.textStyle18,
                     text: "Nike" * 10,

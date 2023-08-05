@@ -15,7 +15,7 @@ class BottomBarScreen extends StatefulWidget {
 
 class _BottomBarScreenState extends State<BottomBarScreen> {
   late PageController controller;
-  int currantScreen = 1;
+  int currantScreen = 0;
   List<Widget> Screens = [
     const HomeScreen(),
     const SearchScreen(),
@@ -47,11 +47,11 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
             currantScreen = index;
           });
 
-       
-        
-      
-       
+         controller.animateToPage(currantScreen,
+              duration: const Duration(milliseconds: 500),
+              curve: Curves.easeIn);
         },
+        
         destinations: const [
           NavigationDestination(
             selectedIcon: Icon(IconlyBold.home),
